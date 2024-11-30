@@ -11,9 +11,7 @@ if ('serviceWorker' in navigator) {
 }
 
 function ZpetButton(){
-    
-    document.getElementById("strana1").className = "MENU";
-    document.getElementById("strana2").className = "HRA";
+    window.location.href = 'https://sibenicemenu.netlify.app/';
 }
 
 function getRandomSlovo(slova){
@@ -21,9 +19,7 @@ function getRandomSlovo(slova){
     return slova[num];
 }
 
-function FunkceHrat(){
-    window.location.href = 'https://www.youtube.com/watch?v=TRI--nfcWws&t=133s';
-}
+
 let slova = ["AUTO", "POLE", "KOSTEL", "PRAHA", "LOKOMOTIVA", "GARGAMEL", "LUKA", "PRSTEN", "KORUNA", "LES"];
 let slovo = getRandomSlovo(slova);
 let pocet_pismen = slovo.length;
