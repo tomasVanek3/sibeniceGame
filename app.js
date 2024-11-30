@@ -88,10 +88,72 @@ function TlacB(){
         }
         else{
             spatne++;
-            
             console.log(spatne);
         }
         
     }
 }
 
+function TlacC(){
+    console.log(slovo);
+    Boolean = false;
+    for(let i = 0; i < slovo.length; i++){
+        if (slovo[i] == "C"){
+            Boolean = true;
+            break;
+        }
+        else{
+            continue;
+        }
+    }
+
+    const C_pis = document.getElementById('C');
+    if (Boolean == true){
+        console.log("C tam je");
+        C_pis.remove();
+    }
+    else{
+        console.log("C tam není");
+        C_pis.remove();
+        if (spatne == 5){
+            console.log("konec");
+        }
+        else{
+            spatne++;
+            console.log(spatne);
+        }
+        
+    }
+}
+
+function TlacD(){
+    console.log(slovo);
+    Boolean = false;
+    for(let i = 0; i < slovo.length; i++){
+        if (slovo[i] == "D"){
+            Boolean = true;
+            break;
+        }
+        else{
+            continue;
+        }
+    }
+
+    const D_pis = document.getElementById('D');
+    if (Boolean == true){
+        console.log("D tam je");
+        D_pis.remove();
+    }
+    else{
+        console.log("D tam není");
+        D_pis.remove();
+        if (spatne == 5){
+            console.log("konec");
+        }
+        else{
+            spatne++;
+            console.log(spatne);
+        }
+        
+    }
+}
