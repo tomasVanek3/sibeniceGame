@@ -152,6 +152,9 @@ function TlacD(){
         }
         else{
             spatne++;
+            if (spatne == 1){
+                
+            }
             console.log(spatne);
         }
         

@@ -36,7 +36,11 @@
 #buttons2{
     align-items: center;
     align-content: center;
-    margin-left: 600px;
+}
+
+#buttons3{
+    align-items: center;
+    align-content: center;
 }
 
 #A, #B, #C, #D, #E, #F, #G, #H, #I, #J, #K, #L, #M, #N, #O, #P, #Q, #R, #S, #T, #U, #V, #W, #X, #Y, #Z{
