@@ -50,14 +50,32 @@ function TlacA(){
     else{
         A_pis.remove();
         console.log("A tam není");
-        if (spatne == 5){
-            console.log("konec");
-        }
-        else{
             spatne++;
-            console.log(spatne);
-        }
-        
+            if (spatne == 1){
+                document.getElementById("a").innerText = "a";
+            }
+            else{
+                if (spatne == 2){
+                    document.getElementById("b").innerText = "b";
+                }
+                else{
+                    if (spatne == 3){
+                        document.getElementById("c").innerText = "c";
+                    }
+                    else{
+                        if (spatne == 4){
+                            document.getElementById("d").innerText = "d";
+                        }
+                        else{
+                            if (spatne == 5){
+                                document.getElementById("d").innerText = "d";
+                                console.log("konec");
+                            }
+                        }
+                    }
+                }
+            }
+        console.log(spatne);  
     }
     
 }
@@ -83,13 +101,32 @@ function TlacB(){
     else{
         console.log("B tam není");
         B_pis.remove();
-        if (spatne == 5){
-            console.log("konec");
+        spatne++;
+        if (spatne == 1){
+            document.getElementById("a").innerText = "a";
         }
         else{
-            spatne++;
-            console.log(spatne);
+            if (spatne == 2){
+                document.getElementById("b").innerText = "b";
+            }
+            else{
+                if (spatne == 3){
+                    document.getElementById("c").innerText = "c";
+                }
+                else{
+                    if (spatne == 4){
+                        document.getElementById("d").innerText = "d";
+                    }
+                    else{
+                        if (spatne == 5){
+                            document.getElementById("d").innerText = "d";
+                            console.log("konec");
+                        }
+                    }
+                }
+            }
         }
+    console.log(spatne);  
         
     }
 }
