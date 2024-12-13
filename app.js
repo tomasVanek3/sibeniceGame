@@ -50,32 +50,9 @@ function TlacA(){
     else{
         A_pis.remove();
         console.log("A tam není");
-            spatne++;
-            if (spatne == 1){
-                document.getElementById("a").innerText = "a";
-            }
-            else{
-                if (spatne == 2){
-                    document.getElementById("b").innerText = "b";
-                }
-                else{
-                    if (spatne == 3){
-                        document.getElementById("c").innerText = "c";
-                    }
-                    else{
-                        if (spatne == 4){
-                            document.getElementById("d").innerText = "d";
-                        }
-                        else{
-                            if (spatne == 5){
-                                document.getElementById("d").innerText = "d";
-                                console.log("konec");
-                            }
-                        }
-                    }
-                }
-            }
-        console.log(spatne);  
+        spatne++;
+        console.log(spatne); 
+        spatnaOdpoved(); 
     }
     
 }
@@ -102,32 +79,8 @@ function TlacB(){
         console.log("B tam není");
         B_pis.remove();
         spatne++;
-        if (spatne == 1){
-            document.getElementById("a").innerText = "a";
-        }
-        else{
-            if (spatne == 2){
-                document.getElementById("b").innerText = "b";
-            }
-            else{
-                if (spatne == 3){
-                    document.getElementById("c").innerText = "c";
-                }
-                else{
-                    if (spatne == 4){
-                        document.getElementById("d").innerText = "d";
-                    }
-                    else{
-                        if (spatne == 5){
-                            document.getElementById("d").innerText = "d";
-                            console.log("konec");
-                        }
-                    }
-                }
-            }
-        }
         console.log(spatne);  
-        
+        spatnaOdpoved();
     }
 }
 
@@ -153,32 +106,8 @@ function TlacC(){
         console.log("C tam není");
         C_pis.remove();
         spatne++;
-        if (spatne == 1){
-            document.getElementById("a").innerText = "a";
-        }
-        else{
-            if (spatne == 2){
-                document.getElementById("b").innerText = "b";
-            }
-            else{
-                if (spatne == 3){
-                    document.getElementById("c").innerText = "c";
-                }
-                else{
-                    if (spatne == 4){
-                        document.getElementById("d").innerText = "d";
-                    }
-                    else{
-                        if (spatne == 5){
-                            document.getElementById("d").innerText = "d";
-                            console.log("konec");
-                        }
-                    }
-                }
-            }
-        }
         console.log(spatne);  
-      
+        spatnaOdpoved();
     }
 }
 
@@ -204,31 +133,35 @@ function TlacD(){
         console.log("D tam není");
         D_pis.remove();
         spatne++;
-        if (spatne == 1){
-            document.getElementById("a").innerText = "a";
-        }
-        else{
-            if (spatne == 2){
-                document.getElementById("b").innerText = "b";
-            }
-            else{
-                if (spatne == 3){
-                    document.getElementById("c").innerText = "c";
-                }
-                else{
-                    if (spatne == 4){
-                        document.getElementById("d").innerText = "d";
-                    }
-                    else{
-                        if (spatne == 5){
-                            document.getElementById("d").innerText = "d";
-                            console.log("konec");
-                        }
-                    }
-                }
-            }
-        }
         console.log(spatne);  
-        
+        spatnaOdpoved();
     }
 }
+
+function spatnaOdpoved(){
+    if (spatne == 1){
+        document.getElementById("a").innerText = "a";
+    }
+    else{
+        if (spatne == 2){
+            document.getElementById("b").innerText = "b";
+        }
+        else{
+            if (spatne == 3){
+                document.getElementById("c").innerText = "c";
+            }
+            else{
+                if (spatne == 4){
+                    document.getElementById("d").innerText = "d";
+                }
+                else{
+                    if (spatne == 5){
+                        document.getElementById("d").innerText = "d";
+                        console.log("konec");
+                    }
+                }
+            }
+        }
+    }
+}
+
