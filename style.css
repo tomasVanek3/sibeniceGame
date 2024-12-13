@@ -7,6 +7,9 @@
     align-items: center;
 }
 
+body{
+    background-image: url("images/pozadi_nebe_2.png");
+}
 #nadpis{
     color: red;
 }
