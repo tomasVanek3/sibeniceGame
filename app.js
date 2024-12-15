@@ -24,8 +24,7 @@ let slova = ["AUTO", "POLE", "KOSTEL", "PRAHA", "LOKOMOTIVA", "GARGAMEL", "LUKA"
 let slovo = getRandomSlovo(slova);
 let pocet_pismen = slovo.length;
 let spatne = 0;
-
-
+let poleSlov = new Array(pocet_pismen);
 
 function TlacA(){
     console.log(slovo);
@@ -35,7 +34,7 @@ function TlacA(){
         //pokud se v tom slově na nějaké pozici nachází A 
         if (slovo[i] == "A"){
             Boolean = true;
-            break;
+            pocet_pismen--;
         }
         else{
             continue;
@@ -45,6 +44,7 @@ function TlacA(){
     const A_pis = document.getElementById('A');
     if (Boolean == true){
         console.log("A tam je");
+        spravnaOdpoced(pocet_pismen);
         A_pis.remove();
     }
     else{
@@ -63,9 +63,13 @@ function TlacB(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "B"){
             Boolean = true;
-            break;
+            poleSlov[i] = "B";
+            document.getElementById("slovo").innerText = poleSlov[i];
+            pocet_pismen--;
         }
         else{
+            poleSlov[i] = "_";
+            document.getElementById("slovo").innerText = poleSlov[i];
             continue;
         }
     }
@@ -73,6 +77,7 @@ function TlacB(){
     const B_pis = document.getElementById('B');
     if (Boolean == true){
         console.log("B tam je");
+        spravnaOdpoced(pocet_pismen);
         B_pis.remove();
     }
     else{
@@ -755,6 +760,15 @@ function spatnaOdpoved(){
                 }
             }
         }
+    }
+}
+
+function spravnaOdpoced(pocet_pismen){
+    if (pocet_pismen == 0){
+        console.log("Výhra");
+    }
+    else{
+
     }
 }
 
