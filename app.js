@@ -26,7 +26,23 @@ let pocet_pismen = slovo.length;
 let spatne = 0;
 let poleSlov = new Array(pocet_pismen);
 
+window.onload = function(){
+    while (pocet_pismen > 0){
+        const nadpis = document.createElement("h2");
+        nadpis.textContent = "_";
+        nadpis.id = "pismeno"
+        const rodic = document.getElementById("slovo");
+        rodic.appendChild(nadpis);
+        pocet_pismen--;
+    }
+
+};
+
+
+//vygeneruj elementy
+
 function TlacA(){
+    
     console.log(slovo);
     Boolean = false;
     //projdeme náhodně vygenerované slovo
@@ -35,6 +51,8 @@ function TlacA(){
         if (slovo[i] == "A"){
             Boolean = true;
             pocet_pismen--;
+            document.getElementById("souradnice").textContent = slovo[i] + " je napozici " + (i + 1);
+            break;
         }
         else{
             continue;
@@ -44,7 +62,6 @@ function TlacA(){
     const A_pis = document.getElementById('A');
     if (Boolean == true){
         console.log("A tam je");
-        spravnaOdpoced(pocet_pismen);
         A_pis.remove();
     }
     else{
@@ -63,13 +80,9 @@ function TlacB(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "B"){
             Boolean = true;
-            poleSlov[i] = "B";
-            document.getElementById("slovo").innerText = poleSlov[i];
             pocet_pismen--;
         }
         else{
-            poleSlov[i] = "_";
-            document.getElementById("slovo").innerText = poleSlov[i];
             continue;
         }
     }
@@ -738,7 +751,7 @@ function TlacZ(){
 
 function spatnaOdpoved(){
     if (spatne == 1){
-        document.getElementById("a").innerText = "a";
+        document.getElementById("a").textContent = "a";
     }
     else{
         if (spatne == 2){
@@ -762,12 +775,15 @@ function spatnaOdpoved(){
         }
     }
 }
-
-function spravnaOdpoced(pocet_pismen){
-    if (pocet_pismen == 0){
-        console.log("Výhra");
-    }
-    else{
+let souradnice = document.getElementById("souradnice");
+function spravnaOdpoved(pozice_pismene, pismeno){
+    for (let i = 0; i < pocet_pismen; i++){
+        if (slovo[i] == pismeno){
+            souradnice.innerText = pismeno + " je na pozici " + (pozice_pismene + 1);
+            break;
+        }
+        else{
+        }
 
     }
 }

@@ -68,3 +68,12 @@ body{
 #prostor{
     margin-top: 520px;
 }
+
+#slovo{
+    display: flex;
+    gap: 5px;
+}
+
+#pismeno{
+    width: 20px;
+}
