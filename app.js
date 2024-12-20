@@ -10,10 +10,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-function ZpetButton(){
-    window.location.href = 'https://sibenicemenu.netlify.app/';
-}
-
 function getRandomSlovo(slova){
     const num = Math.floor(Math.random() * (slova.length));
     return slova[num];
@@ -27,22 +23,33 @@ let spatne = 0;
 let poleSlov = new Array(pocet_pismen);
 
 window.onload = function(){
-    while (pocet_pismen > 0){
+    console.log(slovo);
+    let k = 0;
+    while (pocet_pismen != k){
         const nadpis = document.createElement("h2");
         nadpis.textContent = "_";
-        nadpis.id = "pismeno"
+        nadpis.id = "pismeno" + k;
         const rodic = document.getElementById("slovo");
         rodic.appendChild(nadpis);
-        pocet_pismen--;
+        k++;
     }
 
 };
 
+function spravnaOdpoved(pozice_pismene, pismeno){
+    for(let i = 0; i < pocet_pismen; i++){
+        if (pozice_pismene == i){
+            document.getElementById("pismeno" + pozice_pismene).textContent = pismeno;
+            continue;
+        }
+
+    } 
+
+}
 
 //vygeneruj elementy
 
 function TlacA(){
-    
     console.log(slovo);
     Boolean = false;
     //projdeme náhodně vygenerované slovo
@@ -50,9 +57,9 @@ function TlacA(){
         //pokud se v tom slově na nějaké pozici nachází A 
         if (slovo[i] == "A"){
             Boolean = true;
+            spravnaOdpoved(i, slovo[i]);
             pocet_pismen--;
-            document.getElementById("souradnice").textContent = slovo[i] + " je napozici " + (i + 1);
-            break;
+            continue;
         }
         else{
             continue;
@@ -775,16 +782,5 @@ function spatnaOdpoved(){
         }
     }
 }
-let souradnice = document.getElementById("souradnice");
-function spravnaOdpoved(pozice_pismene, pismeno){
-    for (let i = 0; i < pocet_pismen; i++){
-        if (slovo[i] == pismeno){
-            souradnice.innerText = pismeno + " je na pozici " + (pozice_pismene + 1);
-            break;
-        }
-        else{
-        }
 
-    }
-}
 
