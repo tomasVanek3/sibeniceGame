@@ -19,13 +19,13 @@ function getRandomSlovo(slova){
 let slova = ["AUTO", "POLE", "KOSTEL", "PRAHA", "LOKOMOTIVA", "GARGAMEL", "LUKA", "PRSTEN", "KORUNA", "LES"];
 let slovo = getRandomSlovo(slova);
 let pocet_pismen = slovo.length;
+let kolik_pismen = pocet_pismen;
 let spatne = 0;
-let poleSlov = new Array(pocet_pismen);
 
 window.onload = function(){
     console.log(slovo);
     let k = 0;
-    while (pocet_pismen != k){
+    while (k != pocet_pismen){
         const nadpis = document.createElement("h2");
         nadpis.textContent = "_";
         nadpis.id = "pismeno" + k;
@@ -40,11 +40,9 @@ function spravnaOdpoved(pozice_pismene, pismeno){
     for(let i = 0; i < pocet_pismen; i++){
         if (pozice_pismene == i){
             document.getElementById("pismeno" + pozice_pismene).textContent = pismeno;
-            continue;
+            break;
         }
-
     } 
-
 }
 
 //vygeneruj elementy
@@ -58,14 +56,15 @@ function TlacA(){
         if (slovo[i] == "A"){
             Boolean = true;
             spravnaOdpoved(i, slovo[i]);
-            pocet_pismen--;
+            kolik_pismen--;
+            vyhra(kolik_pismen);
             continue;
         }
         else{
             continue;
         } 
     }
-    
+    pocet_pismen = slovo.length;
     const A_pis = document.getElementById('A');
     if (Boolean == true){
         console.log("A tam je");
@@ -87,7 +86,10 @@ function TlacB(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "B"){
             Boolean = true;
-            pocet_pismen--;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -115,7 +117,10 @@ function TlacC(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "C"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -142,7 +147,10 @@ function TlacD(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "D"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -169,7 +177,10 @@ function TlacE(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "E"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -196,7 +207,10 @@ function TlacF(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "F"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -223,7 +237,10 @@ function TlacG(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "G"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -250,7 +267,10 @@ function TlacH(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "H"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -277,7 +297,10 @@ function TlacI(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "I"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -304,7 +327,10 @@ function TlacJ(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "J"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -313,7 +339,6 @@ function TlacJ(){
 
     const J_pis = document.getElementById('J');
     if (Boolean == true){
-        console.log("J tam je");
         J_pis.remove();
     }
     else{
@@ -331,7 +356,10 @@ function TlacK(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "K"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -340,7 +368,6 @@ function TlacK(){
 
     const K_pis = document.getElementById('K');
     if (Boolean == true){
-        console.log("K tam je");
         K_pis.remove();
     }
     else{
@@ -358,7 +385,10 @@ function TlacL(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "L"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -384,7 +414,10 @@ function TlacM(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "M"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -411,7 +444,10 @@ function TlacN(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "N"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -438,7 +474,10 @@ function TlacO(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "O"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -465,7 +504,10 @@ function TlacP(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "P"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -492,7 +534,10 @@ function TlacQ(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "Q"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -519,7 +564,10 @@ function TlacR(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "R"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -546,7 +594,10 @@ function TlacS(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "S"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -573,7 +624,10 @@ function TlacT(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "T"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -600,7 +654,10 @@ function TlacU(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "U"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -627,7 +684,10 @@ function TlacV(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "V"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -654,7 +714,10 @@ function TlacW(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "W"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -681,7 +744,10 @@ function TlacX(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "X"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -708,7 +774,10 @@ function TlacY(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "Y"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -735,7 +804,10 @@ function TlacZ(){
     for(let i = 0; i < slovo.length; i++){
         if (slovo[i] == "Z"){
             Boolean = true;
-            break;
+            spravnaOdpoved(i, slovo[i]);
+            kolik_pismen--;
+            vyhra(kolik_pismen);
+            continue;
         }
         else{
             continue;
@@ -780,6 +852,12 @@ function spatnaOdpoved(){
                 }
             }
         }
+    }
+}
+
+function vyhra(pocet_pismen){
+    if (pocet_pismen == 0){
+        console.log("vyhrál");
     }
 }
 
