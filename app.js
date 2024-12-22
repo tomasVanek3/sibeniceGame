@@ -828,6 +828,8 @@ function TlacZ(){
     }
 }
 
+
+
 function spatnaOdpoved(){
     if (spatne == 1){
         document.getElementById("a").textContent = "a";
@@ -847,7 +849,7 @@ function spatnaOdpoved(){
                 else{
                     if (spatne == 5){
                         document.getElementById("e").innerText = "e";
-                        console.log("konec");
+                        setTimeout(() => {console.log("konec");}, 2000);
                     }
                 }
             }
