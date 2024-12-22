@@ -846,7 +846,7 @@ function spatnaOdpoved(){
                 }
                 else{
                     if (spatne == 5){
-                        document.getElementById("d").innerText = "d";
+                        document.getElementById("e").innerText = "e";
                         console.log("konec");
                     }
                 }
