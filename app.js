@@ -15,6 +15,16 @@ function getRandomSlovo(slova){
     return slova[num];
 }
 
+function nastaveni(){
+    document.getElementById("page_game").className = "strana_vypnuta";
+    document.getElementById("page_setings").className = "strana_viditelna";
+}
+
+function zpet(){
+    document.getElementById("page_setings").className = "strana_vypnuta";
+    document.getElementById("page_game").className = "strana_viditelna";
+}
+
 
 let slova = ["AUTO", "POLE", "KOSTEL", "PRAHA", "LOKOMOTIVA", "GARGAMEL", "LUKA", "PRSTEN", "KORUNA", "LES"];
 let slovo = getRandomSlovo(slova);

@@ -9,7 +9,6 @@ body{
         url("images/pozadi_nebe_2.png");
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
-    background-position: center, center;
 }
 
 #nadpis{
@@ -25,7 +24,7 @@ body{
     padding-top: 10px;
 }
 
-#Nastaveni{
+#Nastaveni, #zpet{
     margin-left: 1380px;
     align-items: right;
     width: 100px;
@@ -68,4 +67,12 @@ body{
 
 #pismeno{
     width: 20px;
+}
+
+.strana_viditelna{
+    display: block;
+}
+
+.strana_vypnuta{
+    display: none;
 }
