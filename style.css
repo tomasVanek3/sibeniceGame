@@ -76,3 +76,8 @@ body{
 .strana_vypnuta{
     display: none;
 }
+
+#form{
+    align-items: center;
+    text-align: center;
+}
