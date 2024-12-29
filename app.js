@@ -26,7 +26,7 @@ function zpet(){
 }
 
 
-let slova = ["AUTO", "POLE", "KOSTEL", "PRAHA", "LOKOMOTIVA", "GARGAMEL", "LUKA", "PRSTEN", "KORUNA", "LES"];
+let slova = ["AUTO", "POLE", "KOSTEL", "PRAHA", "LOKOMOTIVA", "HARRY JE KOUZELNIK", "GARGAMEL", "LUKA", "PRSTEN", "KORUNA", "LES", "ZUBAR", "CERT URIAS", "CHRAM NOTRE DAME"];
 let slovo = getRandomSlovo(slova);
 let pocet_pismen = slovo.length;
 let kolik_pismen = pocet_pismen;
@@ -34,14 +34,23 @@ let spatne = 0;
 
 window.onload = function(){
     console.log(slovo);
-    let k = 0;
-    while (k != pocet_pismen){
-        const nadpis = document.createElement("h2");
-        nadpis.textContent = "_";
-        nadpis.id = "pismeno" + k;
-        const rodic = document.getElementById("slovo");
-        rodic.appendChild(nadpis);
-        k++;
+    for (let k = 0; k < pocet_pismen; k++){
+        if (slovo[k] == " "){
+            const nadpis = document.createElement("h2");
+            nadpis.textcontent = " ";
+            nadpis.id = "pismeno" + k;
+            kolik_pismen--;
+            const rodic = document.getElementById("slovo");
+            rodic.appendChild(nadpis);
+        }
+        else{
+            const nadpis = document.createElement("h2");
+            nadpis.textContent = "_";
+            nadpis.id = "pismeno" + k;
+            const rodic = document.getElementById("slovo");
+            rodic.appendChild(nadpis);
+        }
+ 
     }
 
 };
